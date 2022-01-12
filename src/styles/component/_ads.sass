@@ -1,0 +1,40 @@
+
+.ads-container
+  text-align: center
+
+  &.padding-top-ads
+    adfm-ad
+      margin-top:  $gridGutter !important
+
+
+  &.padding-bottom-ads
+    adfm-ad
+      padding-bottom:  $gridGutter !important
+
+  adfm-ad
+    max-width: 100% !important
+    position: relative
+    height: auto !important
+    +rem(margin-top, $gridGutter !important)
+
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+
+    &::before
+      display: block
+      content: ''
+      width: 100%
+      padding-top: (90 / 728) * 100%
+
+  &.width-300
+    adfm-ad::before
+      padding-top: (250 / 300) * 100% !important
+.mobile-margin
+  adfm-ad
+    margin-top: $gridGutter !important
+    margin-bottom: $gridGutter !important
+

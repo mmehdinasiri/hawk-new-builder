@@ -1,0 +1,532 @@
+// Author: Saeed Tavoosi <tavoosi.saeed@gmail.com>
+
+// **************************************************************************
+// Set default variable
+// **************************************************************************
+$isMobile: false !default
+$isIE: false !default
+$globalBorderWidth: 2px
+
+// **************************************************************************
+// Rem converting setup
+// **************************************************************************
+$rem-baseline: 16px
+$rem-fallback: false
+$rem-px-only: false
+@if $isIE
+  $rem-px-only: true
+
+// **************************************************************************
+// Color
+// **************************************************************************
+$gray-base: #000
+$white: #fff
+$bgLightest: #fbfbfb
+$ghost: #fafafa
+$white-smoke: #f5f5f5
+$vapor: #f6f6f6
+$snow: #f9f9f9
+$silver: #efefef
+$smoke: #eee
+$gainsboro: #ddd
+$iron: #ccc
+$base: #aaa
+$aluminum: #999
+$jumbo: #808080
+$gray: #888
+$monsoon: #777
+$steel: #666
+$charcoal: #555
+$tuatara: #444
+$oil: #333
+$jet: #222
+$black: #000
+
+$gray-ed: #ededed
+$gray-8: #888
+$gray-f0: #f0f0f0
+$gray-e2: #e2e2e2
+
+/// **************************************************************************
+// main variables
+// **************************************************************************/ ******************************
+$primaryColor: #ee212b
+$secondaryColor: #777
+$text-dark: #444
+$text-secondary: #666
+$text-light: #888
+$text-light--dark-theme: #aaa
+$bodyBg: #fafafa
+$headerBg: $white
+$divider: #e8e8e8
+$hint: #909090
+$searchInpBg: $gray-ed
+$videoOptionBg: $white
+$iconFlicker: $gray-ed
+$playlistBg: $gray-ed
+$playlistHeaderBg: $gainsboro
+$dashedBorderColor: $gainsboro
+$overlayColor: rgba($black, .7)
+$notifSuccess: #61b82c
+$notifError: #e80012
+$notifWran: #eea627
+$filmBg: #404040
+$liveBg: #afafaf
+// **************************************************************************
+// sidebar variables
+// **************************************************************************
+$sidebarWidth: 240px
+$sidebarWidth-min: 88px
+$sidebarBg: #f5f5f5
+$sidebarItemBg: $gainsboro
+$sidebarText: $text-dark
+
+// ******************************
+$green: #6cbf0d
+$blue: #218bee
+$yellow: #ffbe0b
+$red: #fb5607
+$blueBorder: #1eb4ff
+$borderFocus: rgba($blueBorder, .8)
+
+// ******************************
+$borderColor: #dcdcdc
+
+// ******************************
+// $approvedColor: #008148
+$successColor: $green
+$errorColor: $red
+$infoColor: $blue
+// $helpColor: #fff1d9
+
+// Social media color
+// ******************************
+$twitter: #00aced
+$facebook: #3b5998
+// $googleplus: #dd4b39
+// $google: #ea4335 // TODO: Hossein: correct value is: #4285f4 !!!!!
+$instagram: #125688
+$telegram: #517fa4
+// $pinterest: #cb2027
+// $linkedin: #007bb6
+// $youtube: #b00
+// $vimeo: #aad450
+// $tumblr: #32506d
+// $flickr: #ff0084
+// $dribbble: #ea4c89
+// $quora: #a82400
+// $foursquare: #0072b1
+// $forrst: #5b9a68
+// $vk: #45668e
+// $wordpress: #21759b
+// $stumbleupon: #eb4823
+// $yahoo: #7b0099
+// $blogger: #fb8f3d
+// $soundcloud: #ff3a00
+$globalBlackOpacity: rgba($black, .4)
+$filmBg: #404040
+$liveBg: #afafaf
+
+// **************************************************************************
+// Image path
+// **************************************************************************
+$staticPath: '../images/'
+$defaultImgPath: '#{$staticPath}default'
+$patternImgPath: '#{$staticPath}pattern'
+$uploadImgPath: '#{$staticPath}upload'
+$channelImgPath: '#{$staticPath}channel'
+$emptyStateImgPath: '#{$staticPath}empty-state'
+$tvFrameImgPath: '#{$staticPath}tvframe'
+$membershipImgPath: '#{$staticPath}membership'
+$eventImgPath: '#{$staticPath}events'
+$bgImgPath: '#{$staticPath}bg'
+$electionPath: '#{$staticPath}election'
+
+// **************************************************************************
+// font family
+// **************************************************************************
+$globalFontFamily: 'IRANSans', tahoma, Arial, sans-serif
+$faNumFontFamily: 'IRANSans', tahoma, Arial, sans-serif
+$EnNumFontFamily: 'IRANSans', tahoma, Arial, sans-serif
+$enFontFamily: sans-serif
+$iconFontFamily: 'tamashaIcon'
+
+// **************************************************************************
+// Global & body
+// **************************************************************************
+$globalFontSize: 100%
+$globalMargin: 16px
+@if $isMobile
+  $globalMargin: 8px
+$globalRadius: 0
+$border-radius-base: $globalRadius
+$globalTextDirection: rtl
+//$headerResponsiveHeight: 117px
+$bodyLineheight: 1.5
+$bodyFontColor: $tuatara
+$bodyFontSize: 11px
+$bodyFontFamily: $globalFontFamily
+$bodyAntialiased: true
+$mainContainerBg: $bodyBg
+
+$navbar-radius: $globalRadius
+$input-Radius: 16px
+$navbar-height: 32px
+$navbar-padding: 12px
+
+$headerBorderWidth: $globalBorderWidth
+$headerHeight: $navbar-height + (2 * $navbar-padding)
+
+
+$hotTagBar: 25px
+@if $isMobile
+  $hotTagBar: 26px
+
+$headerHeight-withTag: $navbar-height + (3 * $globalMargin) + $hotTagBar
+
+$globalShadowPanel: 0 1px 1px rgba($black, .05)
+$globalShadowHover: 0 1px 2px rgba($black, .21)
+$globalShadowFocus: 0 2px 4px rgba($black, .3)
+$globalShadow: 0 0 6px 0 rgba($black, .25)
+$pannelShadow: 0 0 6px 0 rgba($black, .1)
+$globalTransition: .2s
+
+// **************************************************************************
+// placeholder
+// **************************************************************************
+$placeholder-base-color: $gray-e2
+$shine-color: rgba(240, 240, 240, .7)
+$animation-duration: 2s
+// **************************************************************************
+// Video variables
+// **************************************************************************
+$videoRadius: $globalRadius
+$videoListIconsHeight: 20px
+$upNextHeight: 16px
+
+$videoTimeMargin: abs($globalMargin / 2)
+$videoTimeHeight: 16px
+
+$vidActionBG: #0e0e0e
+$videoTvFrameVidPresent: #1e1e20
+$event-featured-video-row-title-video-line-height: 18px
+
+
+//default video sive
+$video-item-width: 210px
+$video-item-margin: 2px
+
+//big video sive
+$big-video-item-width: 240px
+
+// medium video size (defualt vertical)
+$medium-video-item-width: 168px
+$medium-video-item-height: 94px
+
+// small video size (playlist)
+$small-video-item-width: 114px
+$small-video-item-height: 64.13px
+
+// playable 
+$playable-video-item-width: 424px
+$playable-video-item-height: 424px
+
+$playlist-counter-width: 32px
+
+$video-item-margin: 2px
+$video-numbeer-screen-xs: 2
+$video-numbeer-screen-sm: 3
+$video-numbeer-screen-md: 4
+$video-numbeer-screen-lg: 5
+$video-numbeer-screen-xl: 6
+
+$video-container-gap: 80px
+
+$screen-xs: $video-numbeer-screen-xs * ($video-item-width + (2 * $video-item-margin)) + $video-container-gap
+$screen-sm: $video-numbeer-screen-sm * ($video-item-width + (2 * $video-item-margin)) + $video-container-gap
+$screen-md: $video-numbeer-screen-md * ($video-item-width + (2 * $video-item-margin)) + $video-container-gap
+$screen-lg: $video-numbeer-screen-lg * ($video-item-width + (2 * $video-item-margin)) + $video-container-gap
+$screen-xl: $video-numbeer-screen-xl * ($video-item-width + (2 * $video-item-margin)) + $video-container-gap
+
+$screen-xs-min:              $screen-xs !default
+$screen-phone:               $screen-xs-min !default
+
+$screen-sm-min:              $screen-sm !default
+$screen-tablet:              $screen-sm-min !default
+
+$screen-md-min:              $screen-md !default
+$screen-desktop:             $screen-md-min !default
+
+$screen-lg-min:              $screen-lg !default
+$screen-lg-desktop:          $screen-lg-min !default
+
+$screen-xl-min:              $screen-xl !default
+$screen-xl-desktop:          $screen-xl-min !default
+
+$screen-xs-max:              ($screen-sm-min - 1) !default
+$screen-sm-max:              ($screen-md-min - 1) !default
+$screen-md-max:              ($screen-lg-min - 1) !default
+$screen-lg-max:              ($screen-xl-min - 1) !default
+
+
+
+// **************************************************************************
+// Video variables
+// **************************************************************************
+$width-ratio: 16
+$height-ratio: 9
+$space-below-player: 135px
+$min-player-height: 240px
+$sidebar-width: 402px
+$sidebar-min-width: 300px
+$masthead-height: 56px
+$vidoe-grid: 24px
+$video-page-media-width-lg: 1308px
+$video-page-media-width-md: 1014px
+$video-page-media-width-sm: 630px
+$video-page-media-height-lg: 630px
+$min-player-width: calc(#{$min-player-height} * (#{$width-ratio} / #{$height-ratio}))
+$max-player-height: calc(100vh - (#{$masthead-height} + 24px + #{$space-below-player}))
+$max-player-width: calc((100vh - (#{$masthead-height} + 24px + #{$space-below-player})) * (#{$width-ratio} / #{$height-ratio}))
+
+// **************************************************************************
+// Form
+// **************************************************************************
+$inputBorderColor: $borderColor
+$inputBg: $vapor
+$inputColor: $charcoal
+$inputRadius: 8px
+$formAlertHeight: 16px
+$formLabelWidth: 70px
+$form-bg: $white
+$form-alert-bg: $white
+$form-text: $text-dark
+$form-label: $text-secondary
+
+$selectize-dropdown-background: $gray-ed
+
+$dropdown-li-hover: $gainsboro
+$filter-bg: $gray-ed
+
+// **************************************************************************
+// Grid
+// **************************************************************************
+$gridGutter: $globalMargin
+
+// container min width
+$containerMinWidthDesktop: (400px - 2 * $gridGutter)
+$containerMinWidthMobile: (310px - 2 * $gridGutter)
+
+//$breakpointMax:      1920px
+$breakpointMin: 320px
+$breakpoint1: 1100px
+$breakpoint2: 980px
+$breakpoint3: 860px
+//850
+$breakpoint4: 768px
+$breakpoint5: 600px
+$breakpoint6: 520px
+$breakpointHeight: 770px
+$breakpointHeader: 485px
+
+// **************************************************************************
+// Panels
+// **************************************************************************
+$panelHeadingHeight: 35px
+$panel-margin-side: 24px
+$panel-padding-side: 24px
+$panel-padding-top-bottom: 16px
+@if $isMobile
+  $panel-padding-side: 16px
+$panelModal-bg: $white
+// **************************************************************************
+// Comments
+// **************************************************************************
+$mobileCommentHeight: $panelHeadingHeight + (2 * $gridGutter)
+
+// **************************************************************************
+// Icons
+// **************************************************************************
+$iconSize: 30px
+
+// **************************************************************************
+// Avatar variables
+// **************************************************************************
+$avatarRadius: 50%
+
+$avatarSize: 35px
+$avatarSmallSize: 30px
+$avatarMediumSize: 60px
+$avatarRegularSize: 72px
+$avatarBigSize: 80px
+$avatarExtremeSize: 120px
+
+// **************************************************************************
+// Z-index
+// **************************************************************************
+$z-index-base: 5000
+$sidebarZindex: $z-index-base + 10
+$headerZindex: $sidebarZindex + 10
+$searchResultZindex: $sidebarZindex + 30
+$searchformGroupZindex: $searchResultZindex + 1
+$identityBarZindex: $searchformGroupZindex + 1
+$modalZindex: $z-index-base + 800
+$theaterOverlayZindex: $z-index-base + 50
+$mobileSearchBoxZindex: 10000
+$mobileMenuBoxZindex: 100000000
+$unSupportedZindex: 100000000
+$notificationZindex: 10000
+$commentBoxVideoPageZindex: $headerZindex + 100
+$videoRecommendedZindex: 5
+$modalLoadingZindex: $identityBarZindex + 1
+$loadingBlocksZindex: 12
+
+// **************************************************************************
+// Button
+// **************************************************************************
+$btnBorderRadiusGlobal: 0
+$btnHeight: 32px
+$btnSmallHeight: 24px
+$btnBigHeight: $btnHeight + 10px
+$showMoreBtnHeight: 30px
+
+// **************************************************************************
+// Captcha
+// **************************************************************************
+$captchaBg: #535353
+$captchaHeight: 38px
+
+// **************************************************************************
+// Notification
+// **************************************************************************
+$notificationHeight: $headerHeight
+
+// **********************************************
+// Nav tab
+// **********************************************
+$tabUnderlineHeight: $globalBorderWidth
+$tabBorder: 1px
+$tabHeight: 32px
+$tabHeight2: $tabHeight
+@if not $isMobile
+  $tabHeight2: $tabHeight - 15
+
+// **********************************************
+// Tabs Right
+// **********************************************
+// $tabs-right-width: 220px
+// $tabs-right-border-width: $globalBorderWidth
+// $tabs-right-border: $tabs-right-border-width solid $bodyBg
+// $tabs-right-border-radius: 5px
+// $tabs-right-height: $tabHeight - 5
+
+// **********************************************
+// Simple Bar
+// **********************************************
+$simplebar-track-bg-color: #6c6e71
+
+// **********************************************
+// Help
+// **********************************************
+// $help-color: #a58d66
+// $help-header-color: #d2bc96
+
+// **********************************************
+// Alert
+// **********************************************
+// $alert-panel-background: #fff0d2
+
+// **********************************************
+// Error Page
+// **********************************************
+$error-page-night-mode-bg: #4d4d4d
+$error-page-status-code-color: #e6e6e6
+$error-page-status-code-night-mode-color: #1a1a1a
+$error-page-h2-color: #383739
+$error-page-h2-night-mode-color: #b3b3b3
+
+// **********************************************
+// home mobile, featured video
+// **********************************************
+$compact-featured-video-mobile-line-height: 20px
+$compact-featured-video-mobile-height: (2 * $compact-featured-video-mobile-line-height) + ( 2 * $globalMargin)
+
+// **********************************************
+// home events themes
+// **********************************************
+// $themes-solid-white: $white
+// $themes-solid-gray-light: #cfcfcf
+// $themes-solid-gray: $charcoal
+// $themes-solid-blue-light: #0073c7
+// $themes-solid-blue: #3941c6
+// $themes-solid-awesome: #c70048
+// $themes-solid-green: #5fa70b
+// $themes-solid-genoa: #1b7e53
+// $themes-solid-violet-dark: #373078
+// $themes-solid-black: $black
+
+// $themes: 'solid-white' $themes-solid-white $steel $black $gray-base, 'solid-gray-light' $themes-solid-gray-light $steel $white $gray-base, 'solid-gray' $themes-solid-gray $white $gray-base $white, 'solid-blue-light' $themes-solid-blue-light $white $gray-base $white, 'solid-blue' $themes-solid-blue $white $gray-base $white, 'solid-awesome' $themes-solid-awesome $white $gray-base $white, 'solid-green' $themes-solid-green $white $gray-base $white, 'solid-genoa' $themes-solid-genoa $white $gray-base $white, 'solid-black' $themes-solid-black $white $gray-base $white, 'solid-violet-dark' $themes-solid-violet-dark $white $gray-base $white
+
+// **********************************************
+// list item mobile global
+// **********************************************
+$list-item-mobile-global-height: 50px
+
+// **********************************************
+// identity bar - impersonate and clloaking
+// **********************************************
+$identity-bar-height: $navbar-height
+$identity-bar-margin: $globalMargin
+$identity-bar-message-line: 1
+$identity-bar-height-fix: $identity-bar-height + 2 * $identity-bar-margin
+@if $isMobile
+  $identity-bar-height: 30px
+  $identity-bar-margin: $globalMargin / 2
+  $identity-bar-height-fix: ($identity-bar-height * $identity-bar-message-line) + 2 * $identity-bar-margin
+
+$identity-bar-channel-list-width: 250px + 2 * $identity-bar-margin
+// **********************************************
+$identity-list-margin: $globalMargin
+$identity-list-height: $avatarMediumSize
+@if $isMobile
+  $identity-list-height: $list-item-mobile-global-height
+
+// **********************************************
+// Subscribe Area
+// **********************************************
+$subscribeBtnHeight: 30px
+$subscribeBtnWidth: 60px
+
+// **********************************************
+// channel page
+// **********************************************
+$global-channel-and-dashboard-bar-height: (2 * $globalMargin) + $subscribeBtnHeight
+$channel-page-caption-bar-height: $global-channel-and-dashboard-bar-height
+
+// **********************************************
+// dashboard page
+// **********************************************
+$dashboard-cover-height: 220px
+$dashboard-cover-footer-height: 35px + 2 * $globalMargin
+
+@if $isMobile
+  $dashboard-cover-height: 200px
+
+$dashboard-cover-black-line-height: $global-channel-and-dashboard-bar-height
+$dashboard-cover-avatar-bigest: 2.5 * $dashboard-cover-black-line-height
+$dashboard-cover-avatar-margin: ($dashboard-cover-avatar-bigest - $dashboard-cover-black-line-height) / 2
+$dashboard-cover-name-font-size: 25px
+$dashboard-about-padding-right: $dashboard-cover-avatar-bigest + $gridGutter
+$cover-offset-button-width: 60px
+$dashboard-header-height: $dashboard-cover-height + $dashboard-cover-black-line-height - $globalMargin
+
+// mobile
+@if $isMobile
+  $dashboard-cover-black-line-height: $subscribeBtnHeight + (2 * $globalMargin)
+  $dashboard-cover-name-font-size: 16px
+
+// responsive
+$dashboard-cover-avatar-bigest-responsive: $dashboard-cover-avatar-bigest
+$dashboard-cover-avatar-margin-responsive: $subscribeBtnHeight
+$dashboard-about-padding-right-responsive: $dashboard-cover-avatar-bigest-responsive + $globalMargin
+
