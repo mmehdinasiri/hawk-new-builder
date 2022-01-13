@@ -6,6 +6,5 @@ const cssEntry = {
   main: main,
   mobile: mobile,
 };
-console.log(cssEntry);
 
 exports.cssEntry = cssEntry;

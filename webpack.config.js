@@ -1,12 +1,25 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const RemoveEmptyScriptsPlugin = require("webpack-remove-empty-scripts");
 const { jsEntry } = require("./src/js/js-bundles");
 const { cssEntry } = require("./src/styles/css-bundles");
 
+let mode = "development";
+let target = "web";
+let devtool = "source-map";
+
+if (process.env.NODE_ENV === "production") {
+  mode = "production";
+  target = "browserslist";
+  devtool = false;
+}
+
 module.exports = {
-  mode: "development",
+  mode,
+  target,
 
   entry: {
     ...jsEntry,
@@ -34,15 +47,27 @@ module.exports = {
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.(t(s|sx))$/i,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
     ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
+  },
+  optimization: {
+    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
   },
   plugins: [
     new RemoveEmptyScriptsPlugin(),
+
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
     }),
     new CleanWebpackPlugin(),
   ],
-  devtool: false,
+  devtool,
   devServer: { static: "./dist", hot: true },
 };
