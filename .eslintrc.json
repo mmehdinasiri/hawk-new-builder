@@ -1,0 +1,26 @@
+{
+  "extends": "eslint:recommended",
+  "env": {
+    "browser": true,
+    "node": false,
+    "jquery": true
+  },
+  "rules": {
+    "semi": 2,
+    "eqeqeq": 2,
+    "no-new-func": 2,
+    "no-new": 2,
+    "no-alert": 2
+  },
+  "globals": {
+    "ga": true,
+    "cookie": true,
+    "rivets": true,
+    "notify": true,
+    "pDate": true,
+    "moment": true,
+    "postscribe": true,
+    "sizeFormatter": true,
+    "ProgressBar": true
+  }
+}
