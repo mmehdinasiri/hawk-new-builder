@@ -27,7 +27,7 @@ module.exports = {
     ...cssEntry,
   },
   output: {
-    filename: "[name].js",
+    filename: "dev/js/[name].js",
     path: path.resolve(__dirname, "dist"),
   },
   module: {
@@ -64,18 +64,18 @@ module.exports = {
   plugins: [
     new RemoveEmptyScriptsPlugin(),
 
-    new MiniCssExtractPlugin({
-      filename: "css/[name].css",
-    }),
-    new CleanWebpackPlugin(),
     new CopyPlugin({
       patterns: [
-        { from: "./src/static/contrib", to: "contrib" },
-        { from: "./src/static/images", to: "images" },
-        { from: "./src/static/fonts", to: "fonts" },
+        { from: "./src/static/contrib", to: "dev/contrib" },
+        { from: "./src/static/images", to: "dev/images" },
+        { from: "./src/static/fonts", to: "dev/fonts" },
       ],
     }),
+    new MiniCssExtractPlugin({
+      filename: "dev/css/[name].css",
+    }),
+    new CleanWebpackPlugin(),
   ],
   devtool,
-  devServer: { static: "./dist", hot: true },
+  devServer: { static: "./dist/dev", hot: true },
 };
