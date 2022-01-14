@@ -28,7 +28,8 @@ module.exports = {
   },
   output: {
     filename: "dev/js/[name].js",
-    path: path.resolve(__dirname, "dist"),
+    // path: path.resolve(__dirname, "dist"),
+    publicPath: "auto",
   },
   module: {
     rules: [
@@ -36,7 +37,12 @@ module.exports = {
         test: /\.((c|sa|sc)ss)$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              url: false,
+            },
+          },
           "postcss-loader",
           "sass-loader",
         ],
