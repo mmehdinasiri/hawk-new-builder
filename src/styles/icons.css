@@ -1,9 +1,9 @@
 @font-face {
     font-family: "tamashaIcon";
-    src: url("./tamashaIcon.ttf?f2b263364e2aa39a831516de237b10ca") format("truetype"),
-url("./tamashaIcon.woff?f2b263364e2aa39a831516de237b10ca") format("woff"),
-url("./tamashaIcon.woff2?f2b263364e2aa39a831516de237b10ca") format("woff2"),
-url("./tamashaIcon.eot?f2b263364e2aa39a831516de237b10ca#iefix") format("embedded-opentype");
+    src: url("../fonts/webFont/tamashaIcon.ttf?f2b263364e2aa39a831516de237b10ca") format("truetype"),
+url("../fonts/webFont/tamashaIcon.woff?f2b263364e2aa39a831516de237b10ca") format("woff"),
+url("../fonts/webFont/tamashaIcon.woff2?f2b263364e2aa39a831516de237b10ca") format("woff2"),
+url("../fonts/webFont/tamashaIcon.eot?f2b263364e2aa39a831516de237b10ca#iefix") format("embedded-opentype");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
