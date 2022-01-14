@@ -13,6 +13,7 @@
     "copy-webpack-plugin": "^10.2.0",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.3.1",
+    "fantasticon": "^1.2.3",
     "mini-css-extract-plugin": "^2.4.7",
     "postcss": "^8.4.5",
     "postcss-loader": "^6.2.1",
@@ -29,7 +30,8 @@
   "scripts": {
     "start": "webpack server",
     "watch": "webpack watch",
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack",
+    "gen-icon": "fantasticon"
   },
   "dependencies": {
     "sass": "^1.48.0"

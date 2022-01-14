@@ -9,8 +9,8 @@ const common = [
 const pre_common = [path.resolve(__dirname, "./modulus/adsloader.js")];
 
 const jsEntry = {
-  common: common,
-  pre_common: pre_common,
+  common,
+  pre_common,
 };
 
 exports.jsEntry = jsEntry;
